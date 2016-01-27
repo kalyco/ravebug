@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160127232302) do
+ActiveRecord::Schema.define(version: 20160127234335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,11 +20,11 @@ ActiveRecord::Schema.define(version: 20160127232302) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.integer  "event_level"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.string   "title",                              null: false
+    t.string   "description",                        null: false
+    t.integer  "event_level",                        null: false
+    t.datetime "start_time",                         null: false
+    t.datetime "end_time",                           null: false
     t.boolean  "open",                default: true
     t.integer  "crew_id"
     t.datetime "created_at"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160127232302) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
