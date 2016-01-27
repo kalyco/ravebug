@@ -3,7 +3,7 @@ class CreateEvents < ActiveRecord::Migration
     create_table :events do |t|
     	t.string :title
     	t.string :description
-    	t.url :promotion_level
+    	t.integer :event_level
     	t.datetime :start_time
     	t.datetime :end_time
     	t.boolean :open, default: true
