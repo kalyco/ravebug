@@ -13,7 +13,9 @@ gem "simple_calendar", "~> 2.0"
 gem 'carrierwave'
 
 group :development, :test do
-
+  gem "simplecov", require: false
+  gem "faker"
+  gem "rubocop", require: false
 end
 
 group :development do
@@ -26,9 +28,11 @@ gem 'pry-rails', group: [:development, :test]
 gem 'rspec-rails', group: [:development, :test]
 gem 'capybara', group: [:development, :test]
 gem 'launchy', group: [:development, :test]
-gem 'factory_girl', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
 gem 'valid_attribute', group: [:development, :test]
 gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'teaspoon-jasmine'
 gem 'devise'
+gem "omniauth"
+gem "omniauth-facebook"
 gem 'foundation-rails'
